@@ -7,6 +7,7 @@ RUN cpanm Bio::Perl
 RUN cpanm Statistics::Descriptive
 RUN cpanm Parallel::ForkManager
 RUN cpanm Bio::Phylo
+RUN cpanm List::MoreUtils
 RUN cpanm Array::Compare
 RUN apt-get update && apt-get install -y --no-install-recommends apt-utils --fix-missing \
     git \
