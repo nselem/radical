@@ -43,8 +43,8 @@ Use absolute paths, if you don’t know the path to your dir, place yourself on 
 
 once you finished please exit the container  
 `$ exit`  
+For a detailed example, and files you will need you can consult this site [Example] (https://github.com/RafaRincon/RADICAL_example)  
 
-[Example] (https://github.com/RafaRincon/RADICAL_example)  
 
 ### 2.4 Read your results ! 
 
