@@ -43,6 +43,9 @@ Use absolute paths, if you don’t know the path to your dir, place yourself on 
 
 once you finished please exit the container  
 `$ exit`  
+
+[Example] (https://github.com/RafaRincon/RADICAL_example)  
+
 ### 2.4 Read your results ! 
 
 This is a docker file of radical http://desalle.amnh.org/software.html  
