@@ -36,8 +36,8 @@ RUN git clone https://github.com/nselem/radical
 ## edit PERL5
 ENV PATH=$PATH:/root/radical/radical-0.2/bin
 ENV PERL5LIB=$PERL5LIB:/root/radical/radical-0.2/lib:/usr/local/lib/perl5/site_perl/5.20.3/:/usr/local/lib/perl5/5.20.3/x86_64-linux/
-RUN apt-get update
-RUN apt-get install vim
+#RUN apt-get update
+#RUN apt-get install vim
 
 #ENV PATH /opt/blast/bin:$PATH:
 WORKDIR /usr/src/radical 
