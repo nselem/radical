@@ -26,18 +26,25 @@ RUN cd standard-RAxML-8.0.0; \
 
 ###____________________________________________
 ##install radical
-## Download rarical
+## Download radical
 RUN if [ ! -d /opt ]; then mkdir /opt; fi
 #RUN wget -O /opt/radical-0.2.tar.gz http://desalle.amnh.org/radical-0.2.tar.gz \
 RUN git clone https://github.com/nselem/radical 
 # && cd /opt/radical/quicktree_1.1 && make quicktree
 
+RUN mv /usr/local/lib/perl5/site_perl/5.20.3/x86_64-linux/List/ /usr/local/lib/perl5/site_perl/5.20.3/
+
+## install vim 
+RUN apt-get install -y vim
+## install R
+RUN apt-get install -y r-base
+
 ## edit path
 ## edit PERL5
 ENV PATH=$PATH:/root/radical/radical-0.2/bin
-ENV PERL5LIB=$PERL5LIB:/root/radical/radical-0.2/lib:/usr/local/lib/perl5/site_perl/5.20.3/:/usr/local/lib/perl5/5.20.3/x86_64-linux/:/usr/local/lib/perl5/site_perl/5.20.3/x86_64-linux/:
+ENV PERL5LIB=$PERL5LIB:/root/radical/radical-0.2/lib:/usr/local/lib/perl5/site_perl/5.20.2/:/usr/local/lib/perl5/5.20.2/x86_64-linux/:/usr/local/lib/perl5/site_perl/5.20.2/x86_64-linux/:/usr/share/perl5/local/:/usr/local/lib/x86_64-linux-gnu/perl/5.20.2/:/usr/local/lib/x86_64-linux-gnu/perl/5.20.2/auto/:/usr/local/share/perl/5.20.2/x86_64-linux-gnu-thread-multi/:/usr/local/share/perl/5.20.2/:/usr/local/lib/perl5/site_perl/5.20.3/:/usr/local/lib/perl5/site_perl/5.20.3/x86_64-linux/List/:/usr/local/lib/perl5/site_perl/5.20.3/x86_64-linux/auto/
 
-#RUN apt-get update
+RUN apt-get update
 #RUN apt-get install vim
 
 #ENV PATH /opt/blast/bin:$PATH:
