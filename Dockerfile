@@ -32,7 +32,8 @@ RUN if [ ! -d /opt ]; then mkdir /opt; fi
 RUN git clone https://github.com/nselem/radical 
 # && cd /opt/radical/quicktree_1.1 && make quicktree
 
-RUN mv /usr/local/lib/perl5/site_perl/5.20.3/x86_64-linux/List/ /usr/local/lib/perl5/site_perl/5.20.3/
+#Esta parte no es necesario, cuando se instala radical el proceso se detiene hasta aqui porque da error, ya que estas ubicaciones no existen
+#RUN mv /usr/local/lib/perl5/site_perl/5.20.3/x86_64-linux/List/ /usr/local/lib/perl5/site_perl/5.20.3/
 
 ## install vim 
 RUN apt-get install -y vim
